@@ -1,0 +1,1099 @@
+{
+  "meta": {
+    "cohort": "EASY Residency Season 3",
+    "program": "YZi Labs EASY Residency",
+    "demo_day": "May 2026 \u2014 Computer History Museum, Mountain View, CA",
+    "total_projects": 25,
+    "last_updated": "2026-06-04",
+    "source_access_dates": {
+      "yzilabs_blog": "2026-06-04",
+      "odaily": "2026-06-04",
+      "jb51": "2026-06-04"
+    },
+    "live_validation_date": "2026-06-04"
+  },
+  "projects": [
+    {
+      "name": "Bank of AI",
+      "track": "AI/Agent",
+      "description": "Identity, payment, and token access for AI Agents on BNB Chain.",
+      "validation_status": "dual_account",
+      "x_handles": [
+        {
+          "handle": "BAI_AGI",
+          "role": "primary",
+          "profile_url": "https://x.com/BAI_AGI",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily"
+          ],
+          "followers": {
+            "count": 262800,
+            "display": "262.8K",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        },
+        {
+          "handle": "bankofai_io",
+          "role": "secondary",
+          "profile_url": "https://x.com/bankofai_io",
+          "validation_status": "confirmed",
+          "sources": [
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 4516,
+            "display": "4,516",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "Dual accounts: @BAI_AGI (primary brand, 262.8K followers) and @bankofai_io (ecosystem, 4.5K). Odaily lists @BAI_AGI; jb51/Bee/KuCoin list @bankofai_io. Odaily XHunt rank is not follower count.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "Brief Tech",
+      "track": "AI/Agent",
+      "description": "Legal evidence indexes, chronologies, and case bundles built from raw files for litigation workflows.",
+      "validation_status": "no_official_x",
+      "x_handles": [],
+      "notes": "No official X account published in Odaily, jb51, or YZi Labs listings.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "Cournot",
+      "track": "AI/Agent",
+      "description": "Coordinating intelligence for truth-seeking \u2014 turning AI's probabilistic outputs into verifiable reasoning.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "CournotProtocol",
+          "role": "primary",
+          "profile_url": "https://x.com/CournotProtocol",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 3477,
+            "display": "3,477",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "January",
+            "year": 2026,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "Dapital",
+      "track": "Social Finance",
+      "description": "Financialized social network and trading platform built on DeFi rails.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "trydapital",
+          "role": "primary",
+          "profile_url": "https://x.com/trydapital",
+          "validation_status": "confirmed",
+          "sources": [
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 7294,
+            "display": "7,294",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "June",
+            "year": 2025,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live validated 2026-06-04.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "Flap",
+      "track": "Social Finance",
+      "description": "Infrastructure layer for programmable token launches on EVM chains.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "flapdotsh",
+          "role": "primary",
+          "profile_url": "https://x.com/flapdotsh",
+          "validation_status": "confirmed",
+          "sources": [
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 82900,
+            "display": "82.9K",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "January",
+            "year": 2024,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live validated 2026-06-04.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "GEMINT",
+      "track": "Social Finance",
+      "description": "New market structure for collectible and IP-related assets.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "GEMINT",
+          "role": "primary",
+          "profile_url": "https://x.com/GEMINT",
+          "validation_status": "confirmed",
+          "sources": [
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 2042,
+            "display": "2,042",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "February",
+            "year": 2026,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live validated 2026-06-04.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "LayerV",
+      "track": "On-Chain Finance",
+      "description": "On-chain options and structured products platform.",
+      "validation_status": "no_official_x",
+      "x_handles": [],
+      "notes": "No official X account published in Odaily, jb51, or YZi Labs listings.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "LunarBase",
+      "track": "On-Chain Finance",
+      "description": "Prop AMM and CEX-grade on-chain liquidity.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "LunarBaseX",
+          "role": "primary",
+          "profile_url": "https://x.com/LunarBaseX",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 2902,
+            "display": "2,902",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "October",
+            "year": 2025,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Odaily lists @lunarbasex (case-insensitive). Live validated 2026-06-04.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "L7",
+      "track": "Trading",
+      "description": "Mobile-first, agentic capital access platform that turns trader skill into funded accounts across perps, prediction markets, tokenized equities, yield, and RWAs.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "TradeOnL7",
+          "role": "primary",
+          "profile_url": "https://x.com/TradeOnL7",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 0,
+            "display": "0 (protected)",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live_protected"
+          },
+          "joined": {
+            "month": "August",
+            "year": 2025,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Protected account; public view shows 0 followers. Handle confirmed from listings.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "M\u00f6bius",
+      "track": "On-Chain Finance",
+      "description": "Unified margin layer for DeFi \u2014 borrow, trade perps, and deploy strategy from one account.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "MobiusExchange",
+          "role": "primary",
+          "profile_url": "https://x.com/MobiusExchange",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 863,
+            "display": "863",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "January",
+            "year": 2025,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live validated 2026-06-04.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "Nemesis",
+      "track": "Trading",
+      "description": "First permissionless margin trading protocol in crypto.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "Nemesisdottrade",
+          "role": "primary",
+          "profile_url": "https://x.com/Nemesisdottrade",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 49400,
+            "display": "49.4K",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "December",
+            "year": 2024,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live: 49.4K followers (2026-06-04). Odaily XHunt rank is not follower count.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "Newsliquid",
+      "track": "Trading",
+      "description": "AI Agent-driven automated financial decision and execution layer.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "newsliquidX",
+          "role": "primary",
+          "profile_url": "https://x.com/newsliquidX",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 18200,
+            "display": "18.2K",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "September",
+            "year": 2023,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live: 18.2K followers (2026-06-04). Odaily XHunt rank is not follower count.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "Openstocks",
+      "track": "RWA",
+      "description": "DeFi platform for tokenized private-market exposure.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "openstocks_hq",
+          "role": "primary",
+          "profile_url": "https://x.com/openstocks_hq",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 279,
+            "display": "279",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "March",
+            "year": 2026,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live validated 2026-06-04.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "PokerFi",
+      "track": "Prediction",
+      "description": "Option market for skill games \u2014 every poker card as a tradable claim.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "pokerfi_gg",
+          "role": "primary",
+          "profile_url": "https://x.com/pokerfi_gg",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 388,
+            "display": "388",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "October",
+            "year": 2025,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Odaily lists @Pokerfi_gg (case-insensitive). Live validated 2026-06-04.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "Polysights",
+      "track": "Prediction",
+      "description": "Automation and intelligence infrastructure for the prediction market economy.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "Polysights",
+          "role": "primary",
+          "profile_url": "https://x.com/Polysights",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 16500,
+            "display": "16.5K",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "October",
+            "year": 2024,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "Renaiss",
+      "track": "RWA",
+      "description": "RWA liquidity infrastructure for the $500B physical collectibles market.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "renaissxyz",
+          "role": "primary",
+          "profile_url": "https://x.com/renaissxyz",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 65900,
+            "display": "65.9K",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "December",
+            "year": 2022,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live: 65.9K followers (2026-06-04). Odaily XHunt rank is not follower count.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "TermMax",
+      "track": "On-Chain Finance",
+      "description": "Fixed-rate, fixed-term decentralized borrowing and lending.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "TermMaxFi",
+          "role": "primary",
+          "profile_url": "https://x.com/TermMaxFi",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 92600,
+            "display": "92.6K",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "November",
+            "year": 2022,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live: 92.6K followers (2026-06-04). Odaily XHunt rank is not follower count.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "0xBow.io",
+      "track": "Privacy",
+      "description": "Privacy Pools, compliance-oriented privacy infrastructure for digital assets.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "0xbowio",
+          "role": "primary",
+          "profile_url": "https://x.com/0xbowio",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 9482,
+            "display": "9,482",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "October",
+            "year": 2023,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live: 9,482 followers (2026-06-04).",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "Functor",
+      "track": "AI/Agent",
+      "description": "Self-custodial authorization layer for agentic workflows.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "FunctorNetwork",
+          "role": "primary",
+          "profile_url": "https://x.com/FunctorNetwork",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 69100,
+            "display": "69.1K",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "August",
+            "year": 2024,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live: 69.1K followers (2026-06-04). Odaily XHunt rank is not follower count.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "Isaac",
+      "track": "RWA",
+      "description": "Building the rails for a USD neobank for the global Muslim market, powered by USD-i, an interest-free stablecoin.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "getusdi",
+          "role": "primary",
+          "profile_url": "https://x.com/getusdi",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 8449,
+            "display": "8,449",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "September",
+            "year": 2025,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live validated 2026-06-04.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "MARGIN X",
+      "track": "On-Chain Finance",
+      "description": "On-chain prime brokerage for the BNB Chain ecosystem.",
+      "validation_status": "no_official_x",
+      "x_handles": [],
+      "notes": "No official X account published in Odaily, jb51, or YZi Labs listings. Unrelated @marginx_io exists but is not listed as official for this cohort.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "OrbSwap",
+      "track": "On-Chain Finance",
+      "description": "N-dimensional automated market maker for frictionless stablecoin conversion.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "0xorbSwap",
+          "role": "primary",
+          "profile_url": "https://x.com/0xorbSwap",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 576,
+            "display": "576",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "November",
+            "year": 2022,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live validated 2026-06-04.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "SilentSwap",
+      "track": "Privacy",
+      "description": "Non-custodial, compliance-oriented cross-chain privacy swap.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "SilentSwap",
+          "role": "primary",
+          "profile_url": "https://x.com/SilentSwap",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 11900,
+            "display": "11.9K",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "December",
+            "year": 2023,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live: 11.9K followers (2026-06-04). Odaily XHunt rank is not follower count.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "Taco AI",
+      "track": "AI/Agent",
+      "description": "Intelligence and execution infrastructure for crypto markets via AI agents.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "TacoTradeX",
+          "role": "primary",
+          "profile_url": "https://x.com/TacoTradeX",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 38600,
+            "display": "38.6K",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "November",
+            "year": 2025,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live: 38.6K followers (2026-06-04). Odaily XHunt rank is not follower count.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    },
+    {
+      "name": "vibe.fun",
+      "track": "Trading",
+      "description": "On-chain event-driven derivatives \u2014 barriers, range accruals, and path-dependent payoffs.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "vibedotfun",
+          "role": "primary",
+          "profile_url": "https://x.com/vibedotfun",
+          "validation_status": "confirmed",
+          "sources": [
+            "odaily",
+            "jb51",
+            "bee",
+            "kucoin"
+          ],
+          "followers": {
+            "count": 2938,
+            "display": "2,938",
+            "as_of": "2026-06-04",
+            "confidence": "verified_live"
+          },
+          "joined": {
+            "month": "September",
+            "year": 2023,
+            "source": "x_profile_live"
+          }
+        }
+      ],
+      "notes": "Live: 2,938 followers (2026-06-04).",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-3-cohort"
+        },
+        {
+          "name": "Odaily",
+          "url": "https://www.odaily.news/en/post/5210753"
+        },
+        {
+          "name": "jb51",
+          "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
+        }
+      ]
+    }
+  ]
+}
