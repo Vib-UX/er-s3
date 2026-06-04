@@ -53,12 +53,44 @@
     header { margin-bottom: 28px; }
     header h1 { margin: 0 0 8px; font-size: 1.75rem; font-weight: 700; letter-spacing: -.02em; }
     header p { margin: 0; color: var(--muted); max-width: 720px; }
+    .section-title {
+      font-size: .85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 14px;
       margin-bottom: 24px;
     }
+    .cards-funding { margin-bottom: 28px; }
+    .card .sub {
+      font-size: .78rem;
+      color: var(--muted);
+      margin-top: 6px;
+      line-height: 1.35;
+    }
+    .funding-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+    .funding-panel p { margin: 0 0 12px; color: var(--muted); font-size: .92rem; max-width: none; }
+    .funding-panel ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--text);
+      font-size: .9rem;
+    }
+    .funding-panel li { margin: 6px 0; }
+    .funding-panel .fine { margin-top: 12px; margin-bottom: 0; font-size: .8rem; }
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -167,6 +199,11 @@
 
     <div class="cards" id="cards"></div>
 
+    <p class="section-title">Program funding (YZi Labs)</p>
+    <div id="funding-panel" class="funding-panel"></div>
+    <div class="cards cards-funding" id="funding-cards"></div>
+
+    <p class="section-title">X profile research</p>
     <div class="toolbar">
       <input type="search" id="search" placeholder="Search project or handle…" aria-label="Search">
       <select id="trackFilter" aria-label="Filter by track">
@@ -214,6 +251,17 @@
     let sortKey = 'name';
     let sortAsc = true;
 
+    function formatMoney(n) {
+      if (n == null) return '—';
+      if (n >= 1_000_000) {
+        const m = n / 1_000_000;
+        const s = m % 1 === 0 ? String(m) : m.toFixed(2).replace(/0+$/, '').replace(/\.$/, '');
+        return '$' + s + 'M';
+      }
+      if (n >= 1_000) return '$' + Math.round(n / 1_000) + 'K';
+      return '$' + n.toLocaleString();
+    }
+
     function formatFollowers(n) {
       if (n == null || n === '') return '—';
       if (n >= 1_000_000) return (n / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
@@ -250,6 +298,28 @@
       if (!handles.length) return null;
       const primary = handles.find(h => h.role === 'primary') || handles[0];
       return primary.joined;
+    }
+
+    function renderFunding(funding) {
+      if (!funding) return;
+      const c = funding.cohort;
+      const panel = document.getElementById('funding-panel');
+      const structureList = (funding.structure || []).map(s =>
+        `<li><strong>${formatMoney(s.amount_usd)}</strong> ${s.label}${s.terms ? ` — ${s.terms}` : ''}${s.note ? ` <span style="color:var(--muted)">(${s.note})</span>` : ''}</li>`
+      ).join('');
+
+      panel.innerHTML = `
+        <p><strong>Up to ${formatMoney(funding.max_per_startup_usd)}</strong> in direct funding per early-stage startup through ${funding.program || 'EASY Residency'}.</p>
+        <ul>${structureList}</ul>
+        <p class="fine">${funding.disclaimer || ''}</p>
+      `;
+
+      document.getElementById('funding-cards').innerHTML = `
+        <div class="card"><div class="label">Max per startup</div><div class="value">${formatMoney(funding.max_per_startup_usd)}</div><div class="sub">$150K SAFE + $350K uncapped SAFE</div></div>
+        <div class="card"><div class="label">Upfront SAFE / startup</div><div class="value">${formatMoney(c.upfront_safe_per_startup_usd)}</div><div class="sub">5% equity tranche</div></div>
+        <div class="card"><div class="label">Cohort upfront SAFE</div><div class="value">${formatMoney(c.upfront_safe_cohort_total_usd)}</div><div class="sub">${formatMoney(c.upfront_safe_per_startup_usd)} × ${c.graduates} teams</div></div>
+        <div class="card"><div class="label">Max cohort allocation</div><div class="value">${formatMoney(c.max_cohort_allocation_usd)}</div><div class="sub">${formatMoney(c.max_per_startup_usd)} × ${c.graduates} teams</div></div>
+      `;
     }
 
     function renderCards(meta, rows) {
@@ -390,6 +460,7 @@
         const data = await res.json();
         projects = data.projects;
         initFilters(data);
+        renderFunding(data.meta.funding);
         renderCards(data.meta, projects);
         renderTable();
 

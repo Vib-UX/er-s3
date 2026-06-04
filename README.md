@@ -78,6 +78,24 @@ Your site will be at `https://YOUR_USER.github.io/easy-residency-s3-x-research/`
 | No official X published | 3 (Brief Tech, LayerV, MARGIN X) |
 | Dual X accounts | 1 (Bank of AI: @BAI_AGI + @bankofai_io) |
 
+## Program funding (YZi Labs)
+
+YZi Labs (formerly Binance Labs) offers up to **$500,000** in direct funding per startup through **EASY Residency** (formerly the MVB incubator program):
+
+| Tranche | Amount | Terms |
+|---------|--------|-------|
+| SAFE | $150,000 | 5% equity (upfront / liquid tranche) |
+| Uncapped SAFE | $350,000 | Uncapped SAFE |
+
+**S3 cohort illustrations** (25 graduates, if all receive the full published package):
+
+| Metric | Calculation | Total |
+|--------|-------------|-------|
+| Cohort upfront SAFE | $150K × 25 | **$3.75M** |
+| Max cohort allocation | $500K × 25 | **$12.5M** |
+
+These are illustrative maximums; actual capital deployed per team may differ.
+
 ## Validation methodology
 
 ### Handle confirmation
