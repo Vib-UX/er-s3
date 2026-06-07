@@ -188,6 +188,22 @@
       border: 1px solid var(--danger);
     }
     .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .token { display: flex; flex-direction: column; gap: 4px; min-width: 150px; max-width: 240px; }
+    .tok-mcap { font-size: 1.05rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .tok-mcap .lbl { display: block; font-size: .62rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+    .tok-price { font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+    .tok-meta { font-size: .75rem; color: var(--muted); }
+    .tok-note { font-size: .72rem; color: var(--muted); line-height: 1.3; }
+    .tok-updated { font-size: .66rem; color: var(--muted); }
+    .tok-links { display: flex; flex-wrap: wrap; gap: 8px; font-size: .75rem; margin-top: 2px; }
+    .chg { font-size: .8rem; font-weight: 600; white-space: nowrap; }
+    .chg.up { color: var(--success); }
+    .chg.down { color: var(--danger); }
+    .live-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--success); margin-right: 5px; vertical-align: middle; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+    .badge-tok-live { background: var(--success-bg); color: var(--success); }
+    .badge-tok-pre { background: var(--warn-bg); color: var(--warn); }
+    .badge-tok-unknown { background: var(--neutral-bg); color: var(--neutral); }
   </style>
 </head>
 <body>
@@ -215,6 +231,12 @@
         <option value="dual_account">Dual account</option>
         <option value="no_official_x">No official X</option>
       </select>
+      <select id="tokenFilter" aria-label="Filter by token status">
+        <option value="">All tokens</option>
+        <option value="live">Live token</option>
+        <option value="pre_token">Pre-token</option>
+        <option value="unknown">Not tracked</option>
+      </select>
     </div>
 
     <div class="table-wrap">
@@ -226,6 +248,7 @@
             <th>X handle(s)</th>
             <th data-key="followers" class="num">Followers <span class="sort">↕</span></th>
             <th data-key="joined">Joined <span class="sort">↕</span></th>
+            <th data-key="mcap" class="num">Token / Market <span class="sort">↕</span></th>
             <th data-key="status">Status <span class="sort">↕</span></th>
             <th>Sources</th>
           </tr>
@@ -236,6 +259,7 @@
 
     <footer id="footer">
       <strong>Disclaimer:</strong> Follower counts are point-in-time snapshots from public X profile pages (2026-06-04). “Joined” is the X account creation date, not company founding date. Odaily “XHunt Rank” values are ranking metrics, not follower counts. Protected accounts (e.g. TradeOnL7) may show incomplete public data.
+      <br><br><strong>Token data:</strong> Market caps and prices are fetched live from the public CoinGecko API on page load (a green pulse = live); cached values are point-in-time fallbacks (2026-06-07) shown if the live fetch is blocked or offline. Most S3 projects are early-stage and pre-token — “Not tracked” means no verified on-chain token was confirmed, and the links run a name/ticker search on CoinGecko, DexScreener, and CoinMarketCap. Always verify the contract; similarly named imposter tokens are common. Not financial advice.
     </footer>
   </div>
 
@@ -248,8 +272,126 @@
     };
 
     let projects = [];
+    let metaData = {};
+    let liveMarket = {};
     let sortKey = 'name';
     let sortAsc = true;
+
+    const TOKEN_BADGE = {
+      live: ['Live', 'live'],
+      pre_token: ['Pre-token', 'pre'],
+      none: ['No token', 'unknown'],
+      unknown: ['Not tracked', 'unknown']
+    };
+
+    function formatMcap(n) {
+      if (n == null || n === 0) return null;
+      if (n >= 1e9) return '$' + (n / 1e9).toFixed(2).replace(/\.?0+$/, '') + 'B';
+      if (n >= 1e6) return '$' + (n / 1e6).toFixed(2).replace(/\.?0+$/, '') + 'M';
+      if (n >= 1e3) return '$' + (n / 1e3).toFixed(1).replace(/\.0$/, '') + 'K';
+      return '$' + n.toFixed(2);
+    }
+
+    function formatPrice(n) {
+      if (n == null) return null;
+      if (n >= 1) return '$' + n.toLocaleString(undefined, { maximumFractionDigits: 2 });
+      if (n >= 0.01) return '$' + n.toFixed(4);
+      if (n > 0) return '$' + n.toPrecision(2);
+      return null;
+    }
+
+    function formatChange(c) {
+      if (c == null) return '';
+      const up = c >= 0;
+      return `<span class="chg ${up ? 'up' : 'down'}">${up ? '▲' : '▼'} ${Math.abs(c).toFixed(1)}%</span>`;
+    }
+
+    function formatSupply(n) {
+      if (n == null) return null;
+      if (n >= 1e9) return (n / 1e9).toFixed(2).replace(/\.?0+$/, '') + 'B';
+      if (n >= 1e6) return (n / 1e6).toFixed(2).replace(/\.?0+$/, '') + 'M';
+      if (n >= 1e3) return (n / 1e3).toFixed(1).replace(/\.0$/, '') + 'K';
+      return n.toLocaleString();
+    }
+
+    function renderSupply(t) {
+      if (!t.supply) return '';
+      const parts = [];
+      if (t.supply.total != null) parts.push(`Total ${formatSupply(t.supply.total)}`);
+      if (t.supply.max != null) parts.push(`Max ${formatSupply(t.supply.max)}`);
+      if (t.supply.circulating != null) parts.push(`Circ ${formatSupply(t.supply.circulating)}`);
+      if (!parts.length) return '';
+      return `<div class="tok-meta">${parts.join(' · ')}${t.symbol ? ' ' + t.symbol : ''}</div>`;
+    }
+
+    function tokenMarket(t) {
+      if (!t) return null;
+      const live = t.coingecko_id ? liveMarket[t.coingecko_id] : null;
+      if (live && live.market_cap) {
+        return { market_cap: live.market_cap, price: live.price, change: live.change, live: true };
+      }
+      if (t.cached && t.cached.market_cap_usd) {
+        return { market_cap: t.cached.market_cap_usd, price: t.cached.price_usd, change: t.cached.change_24h, live: false, as_of: t.cached.as_of };
+      }
+      return null;
+    }
+
+    function searchLinks(name, symbol) {
+      const q = encodeURIComponent(symbol || name);
+      return [
+        { name: 'CoinGecko', url: `https://www.coingecko.com/en/search?query=${q}` },
+        { name: 'DexScreener', url: `https://dexscreener.com/search?q=${q}` },
+        { name: 'CMC', url: `https://coinmarketcap.com/search/?q=${q}` }
+      ];
+    }
+
+    function renderTokenLinks(links) {
+      if (!links.length) return '';
+      return `<div class="tok-links">${links.map(l =>
+        `<a href="${l.url}" target="_blank" rel="noopener">${l.name} ↗</a>`).join('')}</div>`;
+    }
+
+    function renderTokenCell(p) {
+      const t = p.token || { status: 'unknown' };
+      const [blabel, bcls] = TOKEN_BADGE[t.status] || TOKEN_BADGE.unknown;
+      const mkt = tokenMarket(t);
+      let html = `<div class="token"><span class="badge badge-tok-${bcls}">${blabel}</span>`;
+      if (mkt) {
+        const dot = mkt.live ? '<span class="live-dot" title="Live from CoinGecko"></span>' : '';
+        html += `<div class="tok-mcap"><span class="lbl">Market cap</span>${dot}${formatMcap(mkt.market_cap)} ${formatChange(mkt.change)}</div>`;
+        const price = formatPrice(mkt.price);
+        if (price) html += `<div class="tok-price">${price}</div>`;
+        html += `<div class="tok-updated">${mkt.live ? 'Live · CoinGecko' : 'Cached · ' + (mkt.as_of || '')}</div>`;
+      } else if (t.status === 'pre_token') {
+        html += `<div class="tok-meta">${t.supply ? 'Token issued · not trading yet' : 'Not trading yet'}</div>`;
+      }
+      const sc = [t.symbol, t.chain].filter(Boolean).join(' · ');
+      if (sc) html += `<div class="tok-meta">${sc}</div>`;
+      html += renderSupply(t);
+      if (t.note) html += `<div class="tok-note">${t.note}</div>`;
+      let links = (t.trackers || []).slice();
+      if (!links.length) links = searchLinks(p.name, t.symbol);
+      html += renderTokenLinks(links);
+      return html + '</div>';
+    }
+
+    async function fetchMarketData() {
+      const ids = [...new Set(projects.map(p => p.token && p.token.coingecko_id).filter(Boolean))];
+      if (!ids.length) return;
+      try {
+        const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${ids.join(',')}&price_change_percentage=24h`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const arr = await res.json();
+        arr.forEach(c => {
+          liveMarket[c.id] = { market_cap: c.market_cap, price: c.current_price, change: c.price_change_percentage_24h };
+        });
+        renderCards(metaData, projects);
+        renderTable();
+      } catch (e) {
+        console.warn('Live market data unavailable, using cached values:', e.message);
+      }
+    }
 
     function formatMoney(n) {
       if (n == null) return '—';
@@ -328,11 +470,13 @@
       const totalFollowers = rows.reduce((s, p) => {
         return s + (p.x_handles || []).reduce((hs, h) => hs + (h.followers?.count || 0), 0);
       }, 0);
+      const liveTokens = rows.filter(p => p.token?.status === 'live').length;
+      const preTokens = rows.filter(p => p.token?.status === 'pre_token').length;
       document.getElementById('cards').innerHTML = `
         <div class="card"><div class="label">Projects</div><div class="value">${meta.total_projects}</div></div>
         <div class="card"><div class="label">With official X</div><div class="value">${withX}</div></div>
-        <div class="card"><div class="label">No official X</div><div class="value">${withoutX}</div></div>
         <div class="card"><div class="label">Combined followers</div><div class="value">${formatFollowers(totalFollowers)}</div></div>
+        <div class="card"><div class="label">Live tokens</div><div class="value">${liveTokens}</div><div class="sub">${preTokens} pre-token</div></div>
         <div class="card"><div class="label">Last updated</div><div class="value" style="font-size:1rem">${meta.last_updated || '—'}</div></div>
       `;
       document.getElementById('subtitle').textContent =
@@ -376,9 +520,11 @@
       const q = document.getElementById('search').value.trim().toLowerCase();
       const track = document.getElementById('trackFilter').value;
       const status = document.getElementById('statusFilter').value;
+      const token = document.getElementById('tokenFilter').value;
       return projects.filter(p => {
         if (track && p.track !== track) return false;
         if (status && p.validation_status !== status) return false;
+        if (token && (p.token?.status || 'unknown') !== token) return false;
         if (!q) return true;
         const hay = [p.name, p.track, p.description, ...(p.x_handles || []).map(h => h.handle)].join(' ').toLowerCase();
         return hay.includes(q);
@@ -393,6 +539,10 @@
           case 'followers':
             va = primaryFollowers(a) ?? -1;
             vb = primaryFollowers(b) ?? -1;
+            return (va - vb) * mul;
+          case 'mcap':
+            va = tokenMarket(a.token)?.market_cap ?? -1;
+            vb = tokenMarket(b.token)?.market_cap ?? -1;
             return (va - vb) * mul;
           case 'joined':
             va = primaryJoined(a)?.year ?? 0;
@@ -423,6 +573,7 @@
           <td>${renderHandles(p.x_handles || [])}</td>
           <td class="num">${renderFollowersCell(p.x_handles || [])}</td>
           <td>${renderJoinedCell(p.x_handles || [])}</td>
+          <td>${renderTokenCell(p)}</td>
           <td>
             <span class="badge badge-${p.validation_status}">${STATUS_LABELS[p.validation_status] || p.validation_status}</span>
             ${p.notes ? `<div class="notes-cell">${p.notes}</div>` : ''}
@@ -459,14 +610,17 @@
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         projects = data.projects;
+        metaData = data.meta;
         initFilters(data);
         renderFunding(data.meta.funding);
         renderCards(data.meta, projects);
         renderTable();
+        fetchMarketData();
 
         document.getElementById('search').addEventListener('input', renderTable);
         document.getElementById('trackFilter').addEventListener('change', renderTable);
         document.getElementById('statusFilter').addEventListener('change', renderTable);
+        document.getElementById('tokenFilter').addEventListener('change', renderTable);
         document.querySelectorAll('th[data-key]').forEach(th => {
           th.addEventListener('click', () => {
             const key = th.dataset.key;

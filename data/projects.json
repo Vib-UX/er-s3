@@ -2,7 +2,7 @@
   "meta": {
     "cohort": "EASY Residency Season 3",
     "program": "YZi Labs EASY Residency",
-    "demo_day": "May 2026 \u2014 Computer History Museum, Mountain View, CA",
+    "demo_day": "May 2026 — Computer History Museum, Mountain View, CA",
     "total_projects": 25,
     "last_updated": "2026-06-04",
     "source_access_dates": {
@@ -36,6 +36,13 @@
         "max_cohort_allocation_usd": 12500000
       },
       "disclaimer": "Illustrative cohort totals if all 25 graduates receive the full published package ($150K + $350K). Actual deployed capital per team may vary."
+    },
+    "token_summary": {
+      "live": 1,
+      "pre_token": 8,
+      "unknown": 16,
+      "none": 0,
+      "as_of": "2026-06-07"
     }
   },
   "projects": [
@@ -102,7 +109,11 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown",
+        "note": "Multiple namesake/imposter BAI/BOAI tokens exist (some with near-zero liquidity); no clearly official token confirmed."
+      }
     },
     {
       "name": "Brief Tech",
@@ -124,12 +135,15 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown"
+      }
     },
     {
       "name": "Cournot",
       "track": "AI/Agent",
-      "description": "Coordinating intelligence for truth-seeking \u2014 turning AI's probabilistic outputs into verifiable reasoning.",
+      "description": "Coordinating intelligence for truth-seeking — turning AI's probabilistic outputs into verifiable reasoning.",
       "validation_status": "confirmed",
       "x_handles": [
         {
@@ -170,7 +184,10 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown"
+      }
     },
     {
       "name": "Dapital",
@@ -211,7 +228,11 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown",
+        "note": "An unverified BSC namesake token exists; no official Dapital token confirmed."
+      }
     },
     {
       "name": "Flap",
@@ -252,7 +273,20 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "pre_token",
+        "symbol": "FLAP",
+        "chain": "BNB Chain",
+        "coingecko_id": "flap",
+        "note": "Token page live on CoinGecko; not yet trading (launch TBA).",
+        "trackers": [
+          {
+            "name": "CoinGecko",
+            "url": "https://www.coingecko.com/en/coins/flap"
+          }
+        ]
+      }
     },
     {
       "name": "GEMINT",
@@ -293,7 +327,11 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown",
+        "note": "Namesake meme/sports tokens exist; no official GEMINT token confirmed."
+      }
     },
     {
       "name": "LayerV",
@@ -315,7 +353,10 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown"
+      }
     },
     {
       "name": "LunarBase",
@@ -361,7 +402,10 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown"
+      }
     },
     {
       "name": "L7",
@@ -407,12 +451,15 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown"
+      }
     },
     {
-      "name": "M\u00f6bius",
+      "name": "Möbius",
       "track": "On-Chain Finance",
-      "description": "Unified margin layer for DeFi \u2014 borrow, trade perps, and deploy strategy from one account.",
+      "description": "Unified margin layer for DeFi — borrow, trade perps, and deploy strategy from one account.",
       "validation_status": "confirmed",
       "x_handles": [
         {
@@ -453,7 +500,10 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown"
+      }
     },
     {
       "name": "Nemesis",
@@ -499,7 +549,26 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "live",
+        "symbol": "NEMESIS",
+        "chain": "Base",
+        "coingecko_id": "nemesis-2",
+        "note": "Live on Uniswap (Base). Beware imposter tickers (e.g. 'Nemesis AI Trader').",
+        "cached": {
+          "market_cap_usd": 566555,
+          "price_usd": 0.000567,
+          "change_24h": -5.7,
+          "as_of": "2026-06-07"
+        },
+        "trackers": [
+          {
+            "name": "CoinGecko",
+            "url": "https://www.coingecko.com/en/coins/nemesis-2"
+          }
+        ]
+      }
     },
     {
       "name": "Newsliquid",
@@ -545,7 +614,10 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown"
+      }
     },
     {
       "name": "Openstocks",
@@ -591,12 +663,15 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown"
+      }
     },
     {
       "name": "PokerFi",
       "track": "Prediction",
-      "description": "Option market for skill games \u2014 every poker card as a tradable claim.",
+      "description": "Option market for skill games — every poker card as a tradable claim.",
       "validation_status": "confirmed",
       "x_handles": [
         {
@@ -637,7 +712,10 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown"
+      }
     },
     {
       "name": "Polysights",
@@ -683,7 +761,12 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "pre_token",
+        "note": "Pre-token; no TGE announced. An unaffiliated 'POLYSIGHTS' meme token on Solana is an imposter.",
+        "trackers": []
+      }
     },
     {
       "name": "Renaiss",
@@ -729,7 +812,14 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "pre_token",
+        "symbol": null,
+        "chain": "BNB Chain",
+        "note": "No native token yet; in open beta. Value currently flows via collectible NFTs.",
+        "trackers": []
+      }
     },
     {
       "name": "TermMax",
@@ -775,7 +865,30 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "pre_token",
+        "symbol": "TMX",
+        "chain": "Ethereum",
+        "coingecko_id": "termmax",
+        "contract": "0x3c2F61f2E27C865981D2e7aAf6b2CDf823030039",
+        "supply": {
+          "total": 1000000000,
+          "max": 1000000000,
+          "circulating": 200000000
+        },
+        "note": "TMX registered (1B fixed supply, ~20% at TGE); TGE to be announced. Not yet trading.",
+        "trackers": [
+          {
+            "name": "CoinGecko",
+            "url": "https://www.coingecko.com/en/coins/termmax"
+          },
+          {
+            "name": "Etherscan",
+            "url": "https://etherscan.io/address/0x3c2F61f2E27C865981D2e7aAf6b2CDf823030039"
+          }
+        ]
+      }
     },
     {
       "name": "0xBow.io",
@@ -821,7 +934,10 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown"
+      }
     },
     {
       "name": "Functor",
@@ -867,7 +983,13 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "pre_token",
+        "symbol": "FUNC",
+        "note": "FUNC currently exists as in-app mining/points, not a listed tradable token.",
+        "trackers": []
+      }
     },
     {
       "name": "Isaac",
@@ -913,7 +1035,13 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "pre_token",
+        "symbol": "USD-i",
+        "note": "Interest-free stablecoin (USD-i); no verified public token contract found yet — beware unrelated 'USDI' tokens.",
+        "trackers": []
+      }
     },
     {
       "name": "MARGIN X",
@@ -935,7 +1063,10 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown"
+      }
     },
     {
       "name": "OrbSwap",
@@ -981,7 +1112,10 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown"
+      }
     },
     {
       "name": "SilentSwap",
@@ -1027,7 +1161,11 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "unknown",
+        "note": "A 'SILE' namesake token exists; official SilentSwap token not verified."
+      }
     },
     {
       "name": "Taco AI",
@@ -1073,12 +1211,17 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "pre_token",
+        "note": "Pre-token; no TGE announced.",
+        "trackers": []
+      }
     },
     {
       "name": "vibe.fun",
       "track": "Trading",
-      "description": "On-chain event-driven derivatives \u2014 barriers, range accruals, and path-dependent payoffs.",
+      "description": "On-chain event-driven derivatives — barriers, range accruals, and path-dependent payoffs.",
       "validation_status": "confirmed",
       "x_handles": [
         {
@@ -1119,7 +1262,23 @@
           "name": "jb51",
           "url": "https://www.jb51.net/blockchain/1027183qcwt.html"
         }
-      ]
+      ],
+      "token": {
+        "status": "pre_token",
+        "symbol": "VIBE",
+        "chain": "Solana",
+        "supply": {
+          "total": 1000000000,
+          "max": 1000000000
+        },
+        "note": "VIBE listed (Solana, 1B supply) but no live market cap / trading yet. Verify the contract — several unrelated 'VIBE' tokens exist.",
+        "trackers": [
+          {
+            "name": "CoinCarp",
+            "url": "https://www.coincarp.com/currencies/vibe-fun/price/"
+          }
+        ]
+      }
     }
   ]
 }
