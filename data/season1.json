@@ -1,0 +1,740 @@
+{
+  "meta": {
+    "season": 1,
+    "cohort": "EASY Residency Season 1",
+    "program": "YZi Labs EASY Residency",
+    "demo_day": "August 2025 — New York Stock Exchange, New York, NY",
+    "total_projects": 15,
+    "last_updated": "2026-06-07",
+    "live_validation_date": null,
+    "funding": {
+      "program": "YZi Labs EASY Residency (formerly MVB incubator program; YZi Labs formerly Binance Labs)",
+      "max_per_startup_usd": 500000,
+      "structure": [
+        {
+          "label": "SAFE",
+          "amount_usd": 150000,
+          "terms": "5% equity",
+          "note": "Upfront / liquid tranche"
+        },
+        {
+          "label": "Uncapped SAFE",
+          "amount_usd": 350000,
+          "terms": "Uncapped SAFE",
+          "note": "Additional allocation"
+        }
+      ],
+      "disclaimer": "Illustrative cohort totals if all graduates receive the full published package ($150K + $350K). Actual deployed capital per team may vary.",
+      "cohort": {
+        "graduates": 15,
+        "upfront_safe_per_startup_usd": 150000,
+        "upfront_safe_cohort_total_usd": 2250000,
+        "max_per_startup_usd": 500000,
+        "max_cohort_allocation_usd": 7500000
+      }
+    },
+    "token_summary": {
+      "live": 3,
+      "pre_token": 4,
+      "none": 6,
+      "unknown": 2,
+      "as_of": "2026-06-08"
+    },
+    "token_audit": "2026-06-08 — CoinGecko, CMC, DexScreener, CoinCarp, project docs"
+  },
+  "projects": [
+    {
+      "name": "APRO",
+      "track": "AI Infrastructure",
+      "description": "AI-native oracle for verifiable multi-source data across DeFi, RWA, and AI.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "APRO_Oracle",
+          "role": "primary",
+          "profile_url": "https://x.com/APRO_Oracle",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "Token $AT listed on Binance Spot (Nov 2025). $3M seed from Polychain, Franklin Templeton, ABCDE.",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        },
+        {
+          "name": "Binance AT listing",
+          "url": "https://www.binance.com/en/support/announcement/detail/b0c65316e2bc4878838852b16291d07b"
+        }
+      ],
+      "token": {
+        "status": "live",
+        "symbol": "AT",
+        "chain": "BNB Chain",
+        "coingecko_id": "apro",
+        "supply": {
+          "total": 1000000000,
+          "max": 1000000000,
+          "circulating": 230000000
+        },
+        "note": "Listed on Binance Spot (Nov 2025). BNB + Ethereum contracts.",
+        "cached": {
+          "market_cap_usd": 28390000,
+          "price_usd": 0.1235,
+          "change_24h": 5.2,
+          "as_of": "2026-06-08"
+        },
+        "trackers": [
+          {
+            "name": "CoinGecko",
+            "url": "https://www.coingecko.com/en/coins/apro"
+          },
+          {
+            "name": "Binance",
+            "url": "https://www.binance.com/en/trade/AT_USDT"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Hubble AI",
+      "track": "AI Infrastructure",
+      "description": "Intelligent agent transaction infrastructure — data, identity, and payments for agentic finance.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "MeetHubble",
+          "role": "primary",
+          "profile_url": "https://x.com/MeetHubble",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "ETHGlobal Buenos Aires 2025 Top 10 Finalist.",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        }
+      ],
+      "token": {
+        "status": "unknown",
+        "note": "Agent transaction infra (hubble.xyz). No confirmed token roadmap."
+      }
+    },
+    {
+      "name": "OptimAI",
+      "track": "AI Infrastructure",
+      "description": "Web3 data layer and agent AI for personalized digital twins.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "OptimaiNetwork",
+          "role": "primary",
+          "profile_url": "https://x.com/OptimaiNetwork",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "~800K nodes reported across 179 countries.",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        }
+      ],
+      "token": {
+        "status": "pre_token",
+        "symbol": "OPI",
+        "chain": "BNB Chain",
+        "note": "OPI documented in GitHub/docs; contract TBD on opBNB. Node points accrue pre-TGE. CMC Labs cohort.",
+        "trackers": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/OptimaiNetwork/optimai-cookbooks"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Robata",
+      "track": "AI Infrastructure",
+      "description": "Decentralized data network for embodied intelligence and robotics training data.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "robataai",
+          "role": "primary",
+          "profile_url": "https://x.com/robataai",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "1.6M+ data samples collected in early stage.",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        }
+      ],
+      "token": {
+        "status": "unknown",
+        "note": "Robotics data network. No token announced. Beware ROBA/ROBO imposters."
+      }
+    },
+    {
+      "name": "StableStock",
+      "track": "RWA",
+      "description": "Crypto-friendly neobroker bringing public stock liquidity on-chain via stablecoins.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "StableStock",
+          "role": "primary",
+          "profile_url": "https://x.com/StableStock",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "Weekly spot volume exceeded $3M; strategic round in progress.",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "TraDeFi platform uses sStock wrapped equities + stablecoins (USDT/USDC). No native governance token.",
+        "trackers": [
+          {
+            "name": "StableStock",
+            "url": "https://stablestock.xyz/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Paimon Finance",
+      "track": "RWA",
+      "description": "Marketplace for tokenized pre-IPO assets (SpaceX, Stripe, ByteDance).",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "Paimon_Finance",
+          "role": "primary",
+          "profile_url": "https://x.com/Paimon_Finance",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "$2M TVL and $1.5M volume in first month (no marketing).",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        }
+      ],
+      "token": {
+        "status": "pre_token",
+        "symbol": "PAIMON",
+        "note": "RWA product tokens live (xSPCX, PPT); PAIMON/vePAIMON governance planned — not yet issued.",
+        "trackers": [
+          {
+            "name": "GitBook",
+            "url": "https://paimon-finance.gitbook.io/paimon.finance/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RecycleFarm",
+      "track": "DePIN",
+      "description": "DePIN-based digital MRV for carbon credit transparency.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "ReFarm_DePIN",
+          "role": "primary",
+          "profile_url": "https://x.com/ReFarm_DePIN",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "Active at Binance Blockchain Week and industry demo days.",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        }
+      ],
+      "token": {
+        "status": "pre_token",
+        "symbol": "RCF",
+        "note": "RCF in GitBook tokenomics; ESA/DePIN credits convert to RCF. Not yet on CG/CMC. Beware RecycliFi RCF imposter.",
+        "trackers": [
+          {
+            "name": "GitBook",
+            "url": "https://recyclefarm.gitbook.io/recyclefarm-en"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bitway",
+      "track": "Bitcoin / DeFi",
+      "description": "Decentralized on-chain capital market — Bitcoin application chain, native BTC lending, asset management.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "BitwayOfficial",
+          "role": "primary",
+          "profile_url": "https://x.com/BitwayOfficial",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "Bitway Chain and Finance in public beta; Bitway Earn coming soon.",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        }
+      ],
+      "token": {
+        "status": "live",
+        "symbol": "BTW",
+        "chain": "BNB Chain",
+        "coingecko_id": "bitway",
+        "contract": "0x444045B0EE1ee319A660a5E3d604CA0ffA35ACaA",
+        "supply": {
+          "total": 10000000000,
+          "max": 10000000000,
+          "circulating": 2200000000
+        },
+        "note": "Native BTW token live. Bitway Chain + Finance in public beta.",
+        "cached": {
+          "market_cap_usd": 131700480,
+          "price_usd": null,
+          "change_24h": null,
+          "as_of": "2026-06-08"
+        },
+        "trackers": [
+          {
+            "name": "CoinGecko",
+            "url": "https://www.coingecko.com/en/coins/bitway"
+          },
+          {
+            "name": "CMC",
+            "url": "https://coinmarketcap.com/currencies/bitway-btw/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Modus",
+      "track": "DeFi",
+      "description": "On-chain prime brokerage on Monad — lending, delta-neutral vault, sealed-bid liquidations.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "Modus_Finance",
+          "role": "primary",
+          "profile_url": "https://x.com/Modus_Finance",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "Team from PancakeSwap, LayerZero, Protocol Labs backgrounds.",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        }
+      ],
+      "token": {
+        "status": "pre_token",
+        "note": "On-chain prime brokerage on Monad; no TGE announced. Beware unrelated Solana MODUS pumps.",
+        "trackers": []
+      }
+    },
+    {
+      "name": "AMMO",
+      "track": "AI Applications",
+      "description": "AI-native assistants for online communities (Superintern Discord agent, Mode Marketplace).",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "Ammo_AI",
+          "role": "primary",
+          "profile_url": "https://x.com/Ammo_AI",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "Super Intern uses in-app TU credits — not an on-chain tradable token."
+      }
+    },
+    {
+      "name": "Lumi",
+      "track": "Biotech / AI",
+      "description": "Visual AI co-pilot for lab automation; partners include AstraZeneca and Pfizer.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "lumi_systems",
+          "role": "primary",
+          "profile_url": "https://x.com/lumi_systems",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "Reach Industries product; founder Silas Adekunle (Reach Robotics).",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "Biotech lab AI (Reach Industries). No token. Beware LumiShare LUMI imposter."
+      }
+    },
+    {
+      "name": "Freebeat.AI",
+      "track": "AI Applications",
+      "description": "Music-to-video generation platform; expanding to general-purpose video agent.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "freebeat_ai",
+          "role": "primary",
+          "profile_url": "https://x.com/freebeat_ai",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "Expanded to 100+ countries.",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "AI video SaaS. No token/TGE."
+      }
+    },
+    {
+      "name": "Video Tutor",
+      "track": "AI Applications",
+      "description": "AI text-to-video personalized tutoring platform.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "VideoTutor_io",
+          "role": "primary",
+          "profile_url": "https://x.com/VideoTutor_io",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "$11M seed; 40K+ users in 5 months; MiniMax partnership.",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "$11M equity seed; no crypto token plans reported.",
+        "trackers": []
+      }
+    },
+    {
+      "name": "Byte AI",
+      "track": "AI Applications",
+      "description": "Web-based food delivery agent accepting crypto payments.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "Byte__AI",
+          "role": "primary",
+          "profile_url": "https://x.com/Byte__AI",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "$BYTE token issued (Virtuals); verify contract before trading.",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        }
+      ],
+      "token": {
+        "status": "live",
+        "symbol": "BYTE",
+        "chain": "Base",
+        "coingecko_id": "byte-3",
+        "contract": "0x2d90785e30a9df6cce329c0171cb8ba0f4a5c17b",
+        "supply": {
+          "total": 1000000000,
+          "max": 1000000000,
+          "circulating": 1000000000
+        },
+        "note": "BYTE by Virtuals on Base (tryabyte.xyz). Micro-cap, thin liquidity — verify contract.",
+        "cached": {
+          "market_cap_usd": 260119,
+          "price_usd": 0.0002601,
+          "change_24h": 3.8,
+          "as_of": "2026-06-08"
+        },
+        "trackers": [
+          {
+            "name": "CoinGecko",
+            "url": "https://www.coingecko.com/en/coins/byte-3"
+          },
+          {
+            "name": "DexScreener",
+            "url": "https://dexscreener.com/base/0x2d90785e30a9df6cce329c0171cb8ba0f4a5c17b"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ComplyGen",
+      "track": "Fintech",
+      "description": "AI automation for fintech compliance — KYC/KYB and marketing content review.",
+      "validation_status": "needs_live_check",
+      "x_handles": [
+        {
+          "handle": "ComplyGen",
+          "role": "primary",
+          "profile_url": "https://x.com/ComplyGen",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "Limited public updates since Demo Day; account activity low.",
+      "official_sources": [
+        {
+          "name": "PANews / Biteye S1 review",
+          "url": "https://www.panewslab.com/en/articles/49450c5a-13ec-4c9d-b7da-197e318c2e0c"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "Fintech compliance SaaS. No token."
+      }
+    }
+  ]
+}

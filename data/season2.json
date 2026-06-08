@@ -1,0 +1,564 @@
+{
+  "meta": {
+    "season": 2,
+    "cohort": "EASY Residency Season 2",
+    "program": "YZi Labs EASY Residency",
+    "demo_day": "December 2025 — Binance Blockchain Week Demo Day",
+    "total_projects": 17,
+    "last_updated": "2026-06-07",
+    "live_validation_date": null,
+    "funding": {
+      "program": "YZi Labs EASY Residency (formerly MVB incubator program; YZi Labs formerly Binance Labs)",
+      "max_per_startup_usd": 500000,
+      "structure": [
+        {
+          "label": "SAFE",
+          "amount_usd": 150000,
+          "terms": "5% equity",
+          "note": "Upfront / liquid tranche"
+        },
+        {
+          "label": "Uncapped SAFE",
+          "amount_usd": 350000,
+          "terms": "Uncapped SAFE",
+          "note": "Additional allocation"
+        }
+      ],
+      "disclaimer": "Illustrative cohort totals if all graduates receive the full published package ($150K + $350K). Actual deployed capital per team may vary.",
+      "cohort": {
+        "graduates": 17,
+        "upfront_safe_per_startup_usd": 150000,
+        "upfront_safe_cohort_total_usd": 2550000,
+        "max_per_startup_usd": 500000,
+        "max_cohort_allocation_usd": 8500000
+      }
+    },
+    "token_summary": {
+      "live": 0,
+      "pre_token": 7,
+      "none": 10,
+      "unknown": 0,
+      "as_of": "2026-06-08"
+    },
+    "token_audit": "2026-06-08 — CoinGecko, CMC, DexScreener, CoinCarp, project docs"
+  },
+  "projects": [
+    {
+      "name": "42.space",
+      "track": "Prediction Markets",
+      "description": "Asset issuance protocol — trade real-world events like liquid tokens via bonding curves.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "42space",
+          "role": "primary",
+          "profile_url": "https://x.com/42space",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "Event Rush live on Binance Wallet; partnership with BNB Chain.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "pre_token",
+        "note": "Event Outcome Tokens (OT) via bonding curves live; protocol governance token TBA.",
+        "trackers": [
+          {
+            "name": "42.space",
+            "url": "https://markets.42.space/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "4D Labs",
+      "track": "AI / Spatial",
+      "description": "Spatial intelligence large models — 3D data collection, generation, and tokenized data rights.",
+      "validation_status": "needs_live_check",
+      "x_handles": [],
+      "notes": "X handle not confirmed in cohort sources.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "pre_token",
+        "note": "Tokenized 3D data-rights framework planned per YZi thesis; no token issued yet."
+      }
+    },
+    {
+      "name": "AllScale",
+      "track": "Fintech / Web3",
+      "description": "Self-custodial stablecoin neobank for cross-border business operations.",
+      "validation_status": "needs_live_check",
+      "x_handles": [
+        {
+          "handle": "AllScaleFinance",
+          "role": "primary",
+          "profile_url": "https://x.com/AllScaleFinance",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "Handle inferred from brand — verify on x.com.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "Self-custodial stablecoin neobank; uses USDT/USDC only. Equity-funded, no ICO."
+      }
+    },
+    {
+      "name": "Advent",
+      "track": "Biotech",
+      "description": "AI-driven precision gene therapeutics and AAV capsid discovery platform.",
+      "validation_status": "no_official_x",
+      "x_handles": [],
+      "notes": "Biotech project; no official X published in YZi Labs cohort listing.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "AI gene therapy biotech. No crypto token."
+      }
+    },
+    {
+      "name": "AgriDynamics",
+      "track": "Robotics / Biotech",
+      "description": "Fruit harvesting robot addressing farm labor crisis.",
+      "validation_status": "no_official_x",
+      "x_handles": [],
+      "notes": "",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "Fruit-harvesting robotics. No web3/token."
+      }
+    },
+    {
+      "name": "Bento.fun",
+      "track": "Prediction Markets",
+      "description": "Social layer for prediction markets — micro-duels in Telegram, Twitter, WhatsApp on BNB Chain.",
+      "validation_status": "needs_live_check",
+      "x_handles": [
+        {
+          "handle": "bento_fun",
+          "role": "primary",
+          "profile_url": "https://x.com/bento_fun",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "BNB Chain native prediction-market primitive.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "pre_token",
+        "note": "BNB Chain social prediction layer; alpha/mainnet rollout. Beware Base BENTO meme imposter."
+      }
+    },
+    {
+      "name": "FingerDance",
+      "track": "AI",
+      "description": "Sign language translation AI infrastructure for the deaf community (SL-LLM).",
+      "validation_status": "needs_live_check",
+      "x_handles": [],
+      "notes": "",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "Sign-language AI infrastructure. No token."
+      }
+    },
+    {
+      "name": "Frontrun",
+      "track": "Trading",
+      "description": "Pro trader wallet for fast discovery, due diligence, and execution (Solana-first, multi-chain roadmap).",
+      "validation_status": "needs_live_check",
+      "x_handles": [
+        {
+          "handle": "FrontrunPro",
+          "role": "primary",
+          "profile_url": "https://x.com/FrontrunPro",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "Backed by Alliance DAO and YZi Labs; frontrun.pro.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "Trading wallet/extension (frontrun.pro). No native platform token announced."
+      }
+    },
+    {
+      "name": "Help.fun",
+      "track": "Web3",
+      "description": "Crypto launchpad for nonprofit and equity-backed startup tokens with anti-bot mechanics.",
+      "validation_status": "needs_live_check",
+      "x_handles": [
+        {
+          "handle": "helpdotfun",
+          "role": "primary",
+          "profile_url": "https://x.com/helpdotfun",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "Nonprofit token launchpad — launches third-party charity tokens (e.g. $DEVELOPER), no native Help.fun token."
+      }
+    },
+    {
+      "name": "Hertzflow",
+      "track": "Trading",
+      "description": "Permissionless leverage market for any oracle-supported asset (crypto, FX, commodities, stocks).",
+      "validation_status": "needs_live_check",
+      "x_handles": [
+        {
+          "handle": "HertzFlow_xyz",
+          "role": "primary",
+          "profile_url": "https://x.com/HertzFlow_xyz",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "hertzflow.xyz",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "pre_token",
+        "note": "Permissionless leverage markets live at hertzflow.xyz; no HERTZ token on CG yet."
+      }
+    },
+    {
+      "name": "Manifolds",
+      "track": "AI / Video",
+      "description": "AI-powered 3D spatially controllable video generation platform.",
+      "validation_status": "needs_live_check",
+      "x_handles": [],
+      "notes": "$150K ARR, 60 paid enterprise clients reported at Demo Day.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "AI 3D video SaaS ($150K ARR). No token."
+      }
+    },
+    {
+      "name": "MeleeMon",
+      "track": "Gaming",
+      "description": "Competitive mobile monster-battle game with stablecoin wagering.",
+      "validation_status": "needs_live_check",
+      "x_handles": [],
+      "notes": "YC '19 founders; prior Gamebytes 5M+ users.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "pre_token",
+        "note": "Stablecoin wagering mobile game. No game token listed yet."
+      }
+    },
+    {
+      "name": "Neomera BioLab",
+      "track": "Biotech",
+      "description": "Non-opioid drug discovery for chronic pain and major chronic diseases.",
+      "validation_status": "no_official_x",
+      "x_handles": [],
+      "notes": "",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "Non-opioid drug discovery biotech. No token."
+      }
+    },
+    {
+      "name": "Sats Terminal",
+      "track": "Bitcoin / DeFi",
+      "description": "Native Bitcoin liquidity protocol — swaps, credit, and yield on BTC/EVM.",
+      "validation_status": "needs_live_check",
+      "x_handles": [
+        {
+          "handle": "SatsTerminal",
+          "role": "primary",
+          "profile_url": "https://x.com/SatsTerminal",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "$1.7M pre-seed (Coinbase Ventures, Draper).",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "pre_token",
+        "note": "Bitcoin DeFi aggregator; $1.7M pre-seed. No native token. Beware Ordinals SATS imposters."
+      }
+    },
+    {
+      "name": "Saturn Labs",
+      "track": "Bitcoin / DeFi",
+      "description": "10%+ yield stablecoin backed by Bitcoin credit (MicroStrategy STRC).",
+      "validation_status": "needs_live_check",
+      "x_handles": [
+        {
+          "handle": "SaturnLabsHQ",
+          "role": "primary",
+          "profile_url": "https://x.com/SaturnLabsHQ",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "pre_token",
+        "note": "USDat/sUSDat yield products live; Gravity Points → up to 5% of future governance token (TGE contingent).",
+        "trackers": [
+          {
+            "name": "Saturn Docs",
+            "url": "https://saturncredit.gitbook.io/saturn-docs/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Predict.fun",
+      "track": "Prediction Markets",
+      "description": "BNB Chain prediction market with yield-bearing collateral and DeFi-boosted liquidity.",
+      "validation_status": "confirmed",
+      "x_handles": [
+        {
+          "handle": "predictdotfun",
+          "role": "primary",
+          "profile_url": "https://x.com/predictdotfun",
+          "validation_status": "confirmed",
+          "sources": [
+            "cohort_listing"
+          ],
+          "followers": {
+            "count": null,
+            "display": null,
+            "as_of": null,
+            "confidence": "source_snapshot"
+          },
+          "joined": {
+            "month": null,
+            "year": null,
+            "source": null
+          }
+        }
+      ],
+      "notes": "Founded by ex-PancakeSwap/LooksRare builder; $1.7B+ volume reported; no native token yet.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        },
+        {
+          "name": "Predict.fun",
+          "url": "https://predict.fun/"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "No native token — platform runs on USDT/USDC. $1.7B+ volume; no confirmed TGE/airdrop structure.",
+        "trackers": [
+          {
+            "name": "Predict.fun",
+            "url": "https://predict.fun/"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Trellis Robotics",
+      "track": "Robotics",
+      "description": "AI soft robotics platform for confined-space industrial inspection.",
+      "validation_status": "no_official_x",
+      "x_handles": [],
+      "notes": "Stanford vine-robot team; pilots with Dow, LBNL.",
+      "official_sources": [
+        {
+          "name": "YZi Labs Blog",
+          "url": "https://www.yzilabs.com/blog/meet-the-easy-residency-season-2-cohort"
+        }
+      ],
+      "token": {
+        "status": "none",
+        "note": "AI soft robotics for industrial inspection. No token."
+      }
+    }
+  ]
+}

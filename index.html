@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EASY Residency S3 — X Profile Research</title>
+  <title>EASY Residency — X Profile & Token Research</title>
   <style>
     :root {
       --bg: #f8f9fb;
@@ -203,15 +203,51 @@
     @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
     .badge-tok-live { background: var(--success-bg); color: var(--success); }
     .badge-tok-pre { background: var(--warn-bg); color: var(--warn); }
+    .badge-tok-none { background: var(--neutral-bg); color: var(--muted); }
     .badge-tok-unknown { background: var(--neutral-bg); color: var(--neutral); }
+    .season-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .season-tab {
+      font: inherit;
+      font-size: .9rem;
+      font-weight: 600;
+      padding: 10px 18px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--muted);
+      cursor: pointer;
+      transition: background .15s, color .15s, border-color .15s;
+    }
+    .season-tab:hover { color: var(--text); border-color: var(--accent); }
+    .season-tab.active {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    .season-tab .count {
+      font-weight: 500;
+      opacity: .75;
+      margin-left: 4px;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <h1>EASY Residency Season 3 — X Profile Research</h1>
-      <p id="subtitle">Official X (Twitter) accounts for YZi Labs EASY Residency S3 graduating projects. Follower counts validated live on 2026-06-04.</p>
+      <h1 id="page-title">EASY Residency — X Profile & Token Research</h1>
+      <p id="subtitle">Loading…</p>
     </header>
+
+    <nav class="season-tabs" id="season-tabs" aria-label="Season">
+      <button type="button" class="season-tab" data-season="1">Season 1</button>
+      <button type="button" class="season-tab" data-season="2">Season 2</button>
+      <button type="button" class="season-tab active" data-season="3">Season 3</button>
+    </nav>
 
     <div class="cards" id="cards"></div>
 
@@ -235,6 +271,7 @@
         <option value="">All tokens</option>
         <option value="live">Live token</option>
         <option value="pre_token">Pre-token</option>
+        <option value="none">No token</option>
         <option value="unknown">Not tracked</option>
       </select>
     </div>
@@ -258,8 +295,8 @@
     </div>
 
     <footer id="footer">
-      <strong>Disclaimer:</strong> Follower counts are point-in-time snapshots from public X profile pages (2026-06-04). “Joined” is the X account creation date, not company founding date. Odaily “XHunt Rank” values are ranking metrics, not follower counts. Protected accounts (e.g. TradeOnL7) may show incomplete public data.
-      <br><br><strong>Token data:</strong> Market caps and prices are fetched live from the public CoinGecko API on page load (a green pulse = live); cached values are point-in-time fallbacks (2026-06-07) shown if the live fetch is blocked or offline. Most S3 projects are early-stage and pre-token — “Not tracked” means no verified on-chain token was confirmed, and the links run a name/ticker search on CoinGecko, DexScreener, and CoinMarketCap. Always verify the contract; similarly named imposter tokens are common. Not financial advice.
+      <strong>Disclaimer:</strong> Follower counts for Season 3 are point-in-time snapshots from public X profile pages (2026-06-04). Seasons 1–2 list handles from published cohort sources; follower counts are not live-validated unless noted. “Joined” is the X account creation date, not company founding date.
+      <br><br><strong>Token audit (2026-06-08):</strong> All 57 cohort projects rechecked against CoinGecko, CoinMarketCap, DexScreener, CoinCarp, and official project docs. Live market caps fetch from CoinGecko on load (green pulse = live); cached values are fallbacks if the API is rate-limited. “No token” = verified no native governance/tradable token. “Pre-token” = TGE planned or registered but not actively trading. “Not tracked” = insufficient evidence to classify (search links only). Many similarly named imposter tokens exist — always verify contract and official X before trading. Not financial advice.
     </footer>
   </div>
 
@@ -274,13 +311,17 @@
     let projects = [];
     let metaData = {};
     let liveMarket = {};
+    let currentSeason = 3;
     let sortKey = 'name';
     let sortAsc = true;
+    let filtersBound = false;
+
+    const SEASON_FILES = { 1: 'season1.json', 2: 'season2.json', 3: 'season3.json' };
 
     const TOKEN_BADGE = {
       live: ['Live', 'live'],
       pre_token: ['Pre-token', 'pre'],
-      none: ['No token', 'unknown'],
+      none: ['No token', 'none'],
       unknown: ['Not tracked', 'unknown']
     };
 
@@ -363,14 +404,19 @@
         if (price) html += `<div class="tok-price">${price}</div>`;
         html += `<div class="tok-updated">${mkt.live ? 'Live · CoinGecko' : 'Cached · ' + (mkt.as_of || '')}</div>`;
       } else if (t.status === 'pre_token') {
-        html += `<div class="tok-meta">${t.supply ? 'Token issued · not trading yet' : 'Not trading yet'}</div>`;
+        html += `<div class="tok-meta">${t.supply ? 'Registered · not trading yet' : 'Not trading yet'}</div>`;
+      } else if (t.status === 'none') {
+        html += `<div class="tok-meta">No native token</div>`;
       }
       const sc = [t.symbol, t.chain].filter(Boolean).join(' · ');
       if (sc) html += `<div class="tok-meta">${sc}</div>`;
       html += renderSupply(t);
       if (t.note) html += `<div class="tok-note">${t.note}</div>`;
       let links = (t.trackers || []).slice();
-      if (!links.length) links = searchLinks(p.name, t.symbol);
+      if (!links.length && t.status === 'unknown') links = searchLinks(p.name, t.symbol);
+      if (!links.length && t.status === 'live' && t.coingecko_id) {
+        links = [{ name: 'CoinGecko', url: `https://www.coingecko.com/en/coins/${t.coingecko_id}` }];
+      }
       html += renderTokenLinks(links);
       return html + '</div>';
     }
@@ -470,17 +516,31 @@
       const totalFollowers = rows.reduce((s, p) => {
         return s + (p.x_handles || []).reduce((hs, h) => hs + (h.followers?.count || 0), 0);
       }, 0);
-      const liveTokens = rows.filter(p => p.token?.status === 'live').length;
-      const preTokens = rows.filter(p => p.token?.status === 'pre_token').length;
+      const ts = meta.token_summary;
+      const liveTokens = ts?.live ?? rows.filter(p => p.token?.status === 'live').length;
+      const preTokens = ts?.pre_token ?? rows.filter(p => p.token?.status === 'pre_token').length;
+      const noToken = ts?.none ?? rows.filter(p => p.token?.status === 'none').length;
+      const untracked = ts?.unknown ?? rows.filter(p => p.token?.status === 'unknown').length;
       document.getElementById('cards').innerHTML = `
         <div class="card"><div class="label">Projects</div><div class="value">${meta.total_projects}</div></div>
         <div class="card"><div class="label">With official X</div><div class="value">${withX}</div></div>
         <div class="card"><div class="label">Combined followers</div><div class="value">${formatFollowers(totalFollowers)}</div></div>
-        <div class="card"><div class="label">Live tokens</div><div class="value">${liveTokens}</div><div class="sub">${preTokens} pre-token</div></div>
-        <div class="card"><div class="label">Last updated</div><div class="value" style="font-size:1rem">${meta.last_updated || '—'}</div></div>
+        <div class="card"><div class="label">Live tokens</div><div class="value">${liveTokens}</div><div class="sub">${preTokens} pre · ${noToken} none · ${untracked} untracked</div></div>
+        <div class="card"><div class="label">Token audit</div><div class="value" style="font-size:1rem">${ts?.as_of || meta.token_audit?.slice(0, 10) || '—'}</div></div>
       `;
       document.getElementById('subtitle').textContent =
-        `Official X accounts for YZi Labs EASY Residency S3 (${meta.demo_day || 'Demo Day May 2026'}). Live validation: ${meta.live_validation_date || meta.last_updated}.`;
+        meta.subtitle ||
+        `${meta.cohort} (${meta.demo_day || ''}).` +
+        (meta.live_validation_date ? ` X validation: ${meta.live_validation_date}.` : ' X handles from cohort listings — follower counts not live-validated for this season.');
+    }
+
+    function updateSeasonTabs(meta) {
+      document.querySelectorAll('.season-tab').forEach(btn => {
+        const n = Number(btn.dataset.season);
+        btn.classList.toggle('active', n === currentSeason);
+        const count = n === currentSeason ? meta.total_projects : btn.dataset.count;
+        if (count) btn.innerHTML = `Season ${n}<span class="count">(${count})</span>`;
+      });
     }
 
     function renderHandles(handles) {
@@ -595,18 +655,51 @@
 
     function initFilters(data) {
       const tracks = [...new Set(data.projects.map(p => p.track))].sort();
-      const sel = document.getElementById('trackFilter');
+      const trackSel = document.getElementById('trackFilter');
+      trackSel.innerHTML = '<option value="">All tracks</option>';
       tracks.forEach(t => {
         const o = document.createElement('option');
         o.value = t;
         o.textContent = t;
-        sel.appendChild(o);
+        trackSel.appendChild(o);
+      });
+      document.getElementById('search').value = '';
+      document.getElementById('statusFilter').value = '';
+      document.getElementById('tokenFilter').value = '';
+    }
+
+    function bindFiltersOnce() {
+      if (filtersBound) return;
+      filtersBound = true;
+      document.getElementById('search').addEventListener('input', renderTable);
+      document.getElementById('trackFilter').addEventListener('change', renderTable);
+      document.getElementById('statusFilter').addEventListener('change', renderTable);
+      document.getElementById('tokenFilter').addEventListener('change', renderTable);
+      document.querySelectorAll('th[data-key]').forEach(th => {
+        th.addEventListener('click', () => {
+          const key = th.dataset.key;
+          if (sortKey === key) sortAsc = !sortAsc;
+          else { sortKey = key; sortAsc = true; }
+          renderTable();
+        });
+      });
+      document.getElementById('season-tabs').addEventListener('click', e => {
+        const btn = e.target.closest('.season-tab');
+        if (!btn) return;
+        const season = Number(btn.dataset.season);
+        if (season !== currentSeason) loadSeason(season);
       });
     }
 
-    async function load() {
+    async function loadSeason(season) {
+      currentSeason = season;
+      liveMarket = {};
+      sortKey = 'name';
+      sortAsc = true;
+      document.title = `EASY Residency S${season} — X Profile & Token Research`;
+      document.getElementById('page-title').textContent = `EASY Residency Season ${season}`;
       try {
-        const res = await fetch('data/projects.json');
+        const res = await fetch(`data/${SEASON_FILES[season]}`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         projects = data.projects;
@@ -614,25 +707,35 @@
         initFilters(data);
         renderFunding(data.meta.funding);
         renderCards(data.meta, projects);
+        updateSeasonTabs(data.meta);
         renderTable();
         fetchMarketData();
-
-        document.getElementById('search').addEventListener('input', renderTable);
-        document.getElementById('trackFilter').addEventListener('change', renderTable);
-        document.getElementById('statusFilter').addEventListener('change', renderTable);
-        document.getElementById('tokenFilter').addEventListener('change', renderTable);
-        document.querySelectorAll('th[data-key]').forEach(th => {
-          th.addEventListener('click', () => {
-            const key = th.dataset.key;
-            if (sortKey === key) sortAsc = !sortAsc;
-            else { sortKey = key; sortAsc = true; }
-            renderTable();
-          });
-        });
+        history.replaceState(null, '', `#s${season}`);
       } catch (e) {
-        document.querySelector('.wrap').innerHTML =
-          `<div class="error"><strong>Failed to load data:</strong> ${e.message}. Open via a local server (e.g. <code>python3 -m http.server</code> in the project folder) or ensure data/projects.json is present.</div>`;
+        document.getElementById('tbody').innerHTML =
+          `<tr><td colspan="8"><div class="error">Failed to load Season ${season}: ${e.message}</div></td></tr>`;
       }
+    }
+
+    async function load() {
+      bindFiltersOnce();
+      const hash = location.hash.match(/^#s([123])$/);
+      const season = hash ? Number(hash[1]) : 3;
+      // Pre-fetch tab counts
+      await Promise.all([1, 2, 3].map(async s => {
+        try {
+          const r = await fetch(`data/${SEASON_FILES[s]}`);
+          if (r.ok) {
+            const d = await r.json();
+            const btn = document.querySelector(`.season-tab[data-season="${s}"]`);
+            if (btn) {
+              btn.dataset.count = d.meta.total_projects;
+              btn.innerHTML = `Season ${s}<span class="count">(${d.meta.total_projects})</span>`;
+            }
+          }
+        } catch (_) {}
+      }));
+      await loadSeason(season);
     }
 
     load();
